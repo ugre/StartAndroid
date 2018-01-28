@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Start Android</string>
+
+    <!-- MAIN -->
+    <string name="recycler_btn_text">Start Recycler</string>
+    <string name="kotlin_btn_text">Start Kotlin</string>
+    <string name="sax_btn_text">Start Sax</string>
+    <string name="custom_components_btn_text">Custom Components</string>
+    <string name="async_btn_text">Do it async</string>
+
 </resources>

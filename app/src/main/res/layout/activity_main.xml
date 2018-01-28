@@ -4,15 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
     tools:context="com.example.ugre.startandroid.MainActivity">
 
-    <TextView
+    <!-- Guidelines -->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideLeft"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        app:layout_constraintGuide_percent="0.1"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/guideRight"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <ImageView
+        android:id="@+id/imgBg"
+        android:src="@drawable/game_bg"
+        app:layout_constraintDimensionRatio="H,681:692"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="@id/guideLeft"
+        app:layout_constraintRight_toRightOf="@id/guideRight"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btnStartRecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_btn_text"
+        app:layout_constraintTop_toTopOf="@id/imgBg"
+        app:layout_constraintLeft_toLeftOf="@id/imgBg"
+        app:layout_constraintRight_toRightOf="@id/imgBg"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartKotlin"/>
+
+    <Button
+        android:id="@+id/btnStartKotlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kotlin_btn_text"
+        app:layout_constraintTop_toBottomOf="@id/btnStartRecycler"
+        app:layout_constraintLeft_toLeftOf="@id/imgBg"
+        app:layout_constraintRight_toRightOf="@id/imgBg"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartSax"/>
+
+    <Button
+        android:id="@+id/btnStartSax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sax_btn_text"
+        app:layout_constraintTop_toBottomOf="@id/btnStartKotlin"
+        app:layout_constraintLeft_toLeftOf="@id/imgBg"
+        app:layout_constraintRight_toRightOf="@id/imgBg"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartCustom"/>
+
+    <Button
+        android:id="@+id/btnStartCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/custom_components_btn_text"
+        app:layout_constraintTop_toBottomOf="@id/btnStartSax"
+        app:layout_constraintLeft_toLeftOf="@id/imgBg"
+        app:layout_constraintRight_toRightOf="@id/imgBg"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartAsync"/>
+
+    <Button
+        android:id="@+id/btnStartAsync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/async_btn_text"
+        app:layout_constraintTop_toBottomOf="@id/btnStartCustom"
+        app:layout_constraintLeft_toLeftOf="@id/imgBg"
+        app:layout_constraintRight_toRightOf="@id/imgBg"
+        app:layout_constraintBottom_toBottomOf="@id/imgBg"/>
 
 </android.support.constraint.ConstraintLayout>
